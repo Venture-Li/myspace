@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    /* 子代，仅有子代关系 */
+    div>p{
+        color: red;
+    }
+</style>
+<body>
+    <p>我是一个大好人，我很独立</p>
+    <div>
+        
+        <p>我是一个小好人，我是div的儿子</p>
+        <span>
+            <p>我是儿子的儿子</p>
+        </span>
+    </div>
+</body>
+</html>

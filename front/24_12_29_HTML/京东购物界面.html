@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8"/>
+    <title>京东购物界面</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        header {
+            background-color: #f10215;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+        nav {
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            display: flex;
+            justify-content: space-around;
+            padding: 10px 0;
+        }
+        nav a {
+            color: #333;
+            text-decoration: none;
+            padding: 8px;
+        }
+        .products {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 20px;
+        }
+        .product {
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            margin: 10px;
+            width: 200px;
+            text-align: center;
+            padding: 10px;
+        }
+        .product img {
+            width: 100%;
+        }
+        .product button {
+            margin-top: 10px;
+            background-color: #f10215;
+            color: #fff;
+            border: none;
+            padding: 8px 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header>京东购物</header>
+    <nav>
+        <a href="#">首页</a>
+        <a href="#">秒杀</a>
+        <a href="#">超市</a>
+        <a href="#">会员</a>
+        <a href="#">购物车</a>
+    </nav>
+    <section class="products">
+        <div class="product">
+            <img src="https://via.placeholder.com/200" alt="Product 1"/>
+            <h3>商品1</h3>
+            <p>￥99.00</p>
+            <button>加入购物车</button>
+        </div>
+        <div class="product">
+            <img src="https://via.placeholder.com/200" alt="Product 2"/>
+            <h3>商品2</h3>
+            <p>￥199.00</p>
+            <button>加入购物车</button>
+        </div>
+    </section>
+</body>
+</html>
