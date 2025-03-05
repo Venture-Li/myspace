@@ -7,15 +7,22 @@
 </head>
 <!-- 逐个递推下去寻找   后代是全部选中-->
 <style>
-    div p{
-        color: red;
+    .color
+    {
+        color: red; 
+    }
+    .p{
+        font-size: large;
+    }
+    .color .p{
+        background-color: aqua;
     }
 </style>
 <body>
     <p>我是一个大好人，我很独立</p>
-    <div>
+    <div class="color">
         
-        <p>我是一个小好人，我是div的儿子</p>
+        <p class="p">我是一个小好人，我是div的儿子</p>
         <span>
             <p>我是儿子的儿子</p>
         </span>
