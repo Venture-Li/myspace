@@ -12,6 +12,6 @@ int main()
     int (*p)[size] = &array;
     cout<<**p<<endl;
     int *k = begin(array);
-    cout<<*(k+5);
+    cout<<*(k+5)<<" "<<k[5];
     return 0;
 }
