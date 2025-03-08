@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            color: red;
+        }
+        div{
+            color: green !important;
+            /* 不能给继承加important，因为子代有就不生效 */
+        }
+        .box{
+            color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">你好</div>
+</body>
+</html>
