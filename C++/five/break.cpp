@@ -9,10 +9,9 @@ int main()
         if(s == above)
         {
             cout<<"double"<<endl;
-            return 0;
+            break;
         }
         above = s;
     }
-    cout<<"no"<<endl;
     return 0;
 }
