@@ -7,6 +7,7 @@ int main()
     cout<<all<<" "<<part<<endl;
     int all = 0;
     cout<<all<<" "<<part<<endl;
+    ::all+=::all+1;
     cout<<::all<<endl;
     int i = 100;
     int sum = 0;
