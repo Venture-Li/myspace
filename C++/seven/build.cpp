@@ -8,16 +8,10 @@ struct Sales_data
                bookNO(s),units_sold(i),revenue(i*p){}
     Sales_data(istream &is)
     {
-        read(is,*this);
+        double price = 0;//单价，不在类内
+        is>>this->bookNO>>this->units_sold>>price;
+        this->revenue = price*(this->units_sold);
     }
-
-
-
-
-
-
-
-
 
     string isbn () const {return bookNO;}
     Sales_data& combine(const Sales_data &rhs);
@@ -63,27 +57,9 @@ istream &read(istream&is,Sales_data &item)
 }
 int main()
 {
-    Sales_data now;
-    if(read(cin,now))
-    {
-        Sales_data next;
-        while(read(cin,next))
-        {
-            if(now.isbn() == next.isbn())
-            {
-                now.combine(next);
-            }
-            else
-            {
-                print(cout,now)<<endl;
-                now = next;
-            }
-        }
-        print(cout,now)<<endl;
-    }
-    else
-    {
-        cerr<<"NO DATA!"<<endl;
-    }
+    Sales_data s1("010203",20,30.0);
+    Sales_data s2(cin);
+    cout<<s1.avg_price()<<endl;
+    cout<<s2.bookNO;
     return 0;
 }
