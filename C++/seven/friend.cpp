@@ -1,7 +1,11 @@
 #include <iostream>
 using namespace std;
-struct Sales_data
+class Sales_data
 {
+    friend Sales_data add(const Sales_data &s1,const Sales_data &s2);
+    friend ostream &print(ostream&os,const Sales_data &item);
+    friend istream& read(istream&is,Sales_data &item);
+    public:
     Sales_data() = default;
     Sales_data(const string &s):bookNO(s){}
     Sales_data(const string &s,unsigned int i,double p):
@@ -12,8 +16,8 @@ struct Sales_data
     }
     string isbn () const {return bookNO;}
     Sales_data& combine(const Sales_data &rhs);
+    private:
     double avg_price ()const;
-
     string bookNO;
     unsigned int units_sold = 0;
     double revenue = 0.0;
